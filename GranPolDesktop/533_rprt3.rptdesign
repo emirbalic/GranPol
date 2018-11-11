@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.2.v20140211-1400 Build &lt;4.3.2.v20140211-1526></property>
+    <html-property name="description">Podaci o strancu, kao i njegovim prelascima granicnih prelaza.</html-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="ID stranac" id="250">
+            <text-property name="promptText">p1</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="248">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://redmine.fit.ba:3306/si_proj021_db1?useOldAliasMetadataBehavior=true</property>
+            <property name="odaUser">si_proj021_user1</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Z3JhTmljbmFQ</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ds1" id="249">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">p1</property>
+                    <property name="paramName">ID stranac</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">44</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">StranacId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Ime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Ime_Jednog_Roditelja</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Prezime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Datum_Rodjenja</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Telefon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Email</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Ulica_I_Broj</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Naziv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Zip</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Naziv_12</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Kod</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">StranacId</property>
+                    <property name="nativeName">StranacId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                    <property name="nativeName">Jedinstveni_Identifikacioni_Broj</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Ime</property>
+                    <property name="nativeName">Ime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Ime_Jednog_Roditelja</property>
+                    <property name="nativeName">Ime_Jednog_Roditelja</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Prezime</property>
+                    <property name="nativeName">Prezime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Datum_Rodjenja</property>
+                    <property name="nativeName">Datum_Rodjenja</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Telefon</property>
+                    <property name="nativeName">Telefon</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Email</property>
+                    <property name="nativeName">Email</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Ulica_I_Broj</property>
+                    <property name="nativeName">Ulica_I_Broj</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Naziv</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Zip</property>
+                    <property name="nativeName">Zip</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Naziv_12</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Kod</property>
+                    <property name="nativeName">Kod</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT STRANAC.`StranacId`,STRANAC.`Jedinstveni_Identifikacioni_Broj` ,STRANAC.`Ime`, STRANAC.`Ime_Jednog_Roditelja`,
+  STRANAC.`Prezime`, STRANAC.`Datum_Rodjenja`, STRANAC.`Telefon`,
+  STRANAC.`Email`, STRANAC.`Ulica_I_Broj`, GRAD.`Naziv`, GRAD.`Zip`,
+  DRZAVA.`Naziv`, DRZAVA.`Kod`
+  FROM
+       `si_proj021_db1`.`stranac` AS STRANAC JOIN `si_proj021_db1`.`grad` AS GRAD ON STRANAC.`grad_GradId` = GRAD.`GradId` JOIN `si_proj021_db1`.`drzava` AS DRZAVA ON STRANAC.`drzava_DrzavaId` = DRZAVA.`DrzavaId`
+where stranac.StranacId = ?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>StranacId</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>StranacId</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>StranacId</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ime</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ime_Jednog_Roditelja</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ime_Jednog_Roditelja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ime_Jednog_Roditelja</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Prezime</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Prezime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Prezime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Datum_Rodjenja</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Datum_Rodjenja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Datum_Rodjenja</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Telefon</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Telefon</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Telefon</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Email</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Email</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Email</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ulica_I_Broj</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ulica_I_Broj</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ulica_I_Broj</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Naziv</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Naziv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Naziv</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Zip</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Zip</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Zip</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Naziv</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Naziv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Naziv</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Kod</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Kod</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Kod</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ds2" id="327">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Prelazak_GraniceId</property>
+                    <property name="alias">ID</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Naziv</property>
+                    <property name="alias">granicni_prelaz</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Vrijeme</property>
+                    <property name="alias">vrijeme_prelaska</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Naziv_4</property>
+                    <property name="alias">vrsta_prelaska</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Komentar</property>
+                    <property name="alias">komentar</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">p1</property>
+                    <property name="paramName">ID stranac</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">granicni_prelaz</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">vrijeme_prelaska</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">vrsta_prelaska</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">komentar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Prelazak_GraniceId</property>
+                    <property name="nativeName">Prelazak_GraniceId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Naziv</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Vrijeme</property>
+                    <property name="nativeName">Vrijeme</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Naziv_4</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Komentar</property>
+                    <property name="nativeName">Komentar</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT PRELAZAKGRANICE.`Prelazak_GraniceId`, GRANICNIPRELAZ.`Naziv`,
+  PRELAZAKGRANICE.`Vrijeme`, VRSTAPRELASKAGRANICE.`Naziv`, PRELAZAKGRANICE.`Komentar`
+  FROM
+       `si_proj021_db1`.`prelazak_granice` AS PRELAZAKGRANICE JOIN `si_proj021_db1`.`stranac` AS STRANAC ON PRELAZAKGRANICE.`stranac_StranacId` = STRANAC.`StranacId` JOIN `si_proj021_db1`.`vrsta_prelaska_granice` AS VRSTAPRELASKAGRANICE ON PRELAZAKGRANICE.`vrsta_Prelaska_Granice_Vrsta_Prelaska_GraniceId` = VRSTAPRELASKAGRANICE.`Vrsta_Prelaska_GraniceId` JOIN `si_proj021_db1`.`granicni_prelaz` AS GRANICNIPRELAZ ON PRELAZAKGRANICE.`granicniPrelaz_Granicni_PrelazId` = GRANICNIPRELAZ.`Granicni_PrelazId`
+ 
+where stranac.StranacId = ?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="backgroundColor">#FFFFCC</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="332">
+            <property name="height">2.4791666666666665in</property>
+            <property name="width">7.739583333333333in</property>
+            <column id="333">
+                <property name="width">4.875in</property>
+            </column>
+            <column id="334">
+                <property name="width">0.2916666666666667in</property>
+            </column>
+            <column id="335">
+                <property name="width">2.5729166666666665in</property>
+            </column>
+            <row id="336">
+                <property name="height">1.0833333333333333in</property>
+                <cell id="337">
+                    <label id="356">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">normal</property>
+                        <text-property name="text">Državna granična služba BiH</text-property>
+                    </label>
+                    <label id="349">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">normal</property>
+                        <text-property name="text">Granična policija BiH</text-property>
+                    </label>
+                </cell>
+                <cell id="338"/>
+                <cell id="339">
+                    <image id="330">
+                        <property name="display">block</property>
+                        <property name="height">1.3645833333333333in</property>
+                        <property name="width">2.5104166666666665in</property>
+                        <property name="source">embed</property>
+                        <property name="imageName">granpol.jpg</property>
+                    </image>
+                </cell>
+            </row>
+            <row id="514">
+                <property name="height">0.28125in</property>
+                <cell id="515"/>
+                <cell id="516"/>
+                <cell id="517"/>
+            </row>
+            <row id="340">
+                <cell id="341"/>
+                <cell id="342"/>
+                <cell id="343"/>
+            </row>
+            <row id="344">
+                <property name="height">0.010416666666666666in</property>
+                <cell id="345"/>
+                <cell id="346"/>
+                <cell id="347"/>
+            </row>
+            <row id="351">
+                <property name="height">0.3645833333333333in</property>
+                <cell id="352">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="518"/>
+                <cell id="519"/>
+            </row>
+            <row id="510">
+                <property name="height">0.3645833333333333in</property>
+                <cell id="511">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <label id="520">
+                        <property name="fontSize">13pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Dnevnik prelazaka granice stranih lica</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="502">
+                <property name="height">0.3645833333333333in</property>
+                <cell id="503"/>
+                <cell id="504"/>
+                <cell id="505"/>
+            </row>
+        </grid>
+        <grid id="361">
+            <property name="height">2.4479166666666665in</property>
+            <property name="width">7.739583333333333in</property>
+            <property name="dataSet">ds1</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">StranacId</property>
+                    <text-property name="displayName">StranacId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["StranacId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                    <text-property name="displayName">Jedinstveni_Identifikacioni_Broj</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Jedinstveni_Identifikacioni_Broj"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Ime</property>
+                    <text-property name="displayName">Ime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Ime_Jednog_Roditelja</property>
+                    <text-property name="displayName">Ime_Jednog_Roditelja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ime_Jednog_Roditelja"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Prezime</property>
+                    <text-property name="displayName">Prezime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Prezime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Datum_Rodjenja</property>
+                    <text-property name="displayName">Datum_Rodjenja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Datum_Rodjenja"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">Telefon</property>
+                    <text-property name="displayName">Telefon</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Telefon"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Email</property>
+                    <text-property name="displayName">Email</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Email"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Ulica_I_Broj</property>
+                    <text-property name="displayName">Ulica_I_Broj</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ulica_I_Broj"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Naziv</property>
+                    <text-property name="displayName">Naziv</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Naziv"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Zip</property>
+                    <text-property name="displayName">Zip</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Zip"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Naziv_12</property>
+                    <text-property name="displayName">Naziv_12</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Naziv_12"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Kod</property>
+                    <text-property name="displayName">Kod</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Kod"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="362">
+                <property name="width">1.9375in</property>
+            </column>
+            <column id="363">
+                <property name="width">2.2395833333333335in</property>
+            </column>
+            <column id="364">
+                <property name="width">1.4479166666666667in</property>
+            </column>
+            <column id="365">
+                <property name="width">2.1145833333333335in</property>
+            </column>
+            <row id="366">
+                <property name="height">0.2604166666666667in</property>
+                <cell id="367">
+                    <property name="colSpan">4</property>
+                    <property name="rowSpan">1</property>
+                    <label id="386">
+                        <property name="backgroundColor">#FFFF80</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">italic</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Podaci o stranom licu</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="425">
+                <property name="height">0.2604166666666667in</property>
+                <cell id="426">
+                    <label id="396">
+                        <text-property name="text">ID stranog lica:</text-property>
+                    </label>
+                </cell>
+                <cell id="427">
+                    <data id="394">
+                        <property name="fontStyle">italic</property>
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">StranacId</property>
+                                <text-property name="displayName">StranacId</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["StranacId"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">StranacId</property>
+                    </data>
+                </cell>
+                <cell id="428">
+                    <label id="392">
+                        <text-property name="text">Dokument:</text-property>
+                    </label>
+                </cell>
+                <cell id="429">
+                    <data id="395">
+                        <property name="fontStyle">italic</property>
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                                <text-property name="displayName">Jedinstveni_Identifikacioni_Broj</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Jedinstveni_Identifikacioni_Broj"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Jedinstveni_Identifikacioni_Broj</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="371">
+                <property name="height">0.4270833333333333in</property>
+                <cell id="372">
+                    <label id="387">
+                        <text-property name="text">Ime (Ime roditelja) Prezime:</text-property>
+                    </label>
+                </cell>
+                <cell id="373">
+                    <text-data id="398">
+                        <property name="fontStyle">italic</property>
+                        <expression name="valueExpr">row["Ime"]+" ("+row["Ime_Jednog_Roditelja"]+") "+row["Prezime"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="374">
+                    <label id="399">
+                        <text-property name="text">Datum rodjenja:</text-property>
+                    </label>
+                </cell>
+                <cell id="375">
+                    <data id="400">
+                        <property name="fontStyle">italic</property>
+                        <property name="resultSetColumn">Datum_Rodjenja</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="376">
+                <cell id="377">
+                    <label id="401">
+                        <text-property name="text">Ulica i broj:</text-property>
+                    </label>
+                </cell>
+                <cell id="378">
+                    <data id="402">
+                        <property name="fontStyle">italic</property>
+                        <property name="resultSetColumn">Ulica_I_Broj</property>
+                    </data>
+                </cell>
+                <cell id="379">
+                    <label id="403">
+                        <text-property name="text">Grad, ZIP:</text-property>
+                    </label>
+                </cell>
+                <cell id="380">
+                    <text-data id="404">
+                        <property name="fontStyle">italic</property>
+                        <expression name="valueExpr">row["Naziv"]+", "+row["Zip"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="381">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="382">
+                    <label id="430">
+                        <text-property name="text">Drzava:</text-property>
+                    </label>
+                </cell>
+                <cell id="383">
+                    <data id="449">
+                        <property name="resultSetColumn">Naziv_12</property>
+                    </data>
+                </cell>
+                <cell id="384">
+                    <label id="446">
+                        <text-property name="text">Kod drzave:</text-property>
+                    </label>
+                </cell>
+                <cell id="385">
+                    <data id="448">
+                        <property name="fontStyle">italic</property>
+                        <property name="resultSetColumn">Kod</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="434">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="435">
+                    <label id="432">
+                        <text-property name="text">E-mail adresa:</text-property>
+                    </label>
+                </cell>
+                <cell id="436">
+                    <data id="433">
+                        <property name="fontStyle">italic</property>
+                        <property name="resultSetColumn">Email</property>
+                    </data>
+                </cell>
+                <cell id="437">
+                    <label id="439">
+                        <text-property name="text">Telefon:</text-property>
+                    </label>
+                </cell>
+                <cell id="438">
+                    <data id="440">
+                        <property name="fontStyle">italic</property>
+                        <property name="resultSetColumn">Telefon</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="441">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="442"/>
+                <cell id="443"/>
+                <cell id="444"/>
+                <cell id="445"/>
+            </row>
+            <row id="492">
+                <property name="height">0.3020833333333333in</property>
+                <cell id="493"/>
+                <cell id="494"/>
+                <cell id="495"/>
+                <cell id="496"/>
+            </row>
+            <row id="420">
+                <cell id="421"/>
+                <cell id="422"/>
+                <cell id="423"/>
+                <cell id="424"/>
+            </row>
+        </grid>
+        <table id="451">
+            <property name="dataSet">ds2</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ID</property>
+                    <text-property name="displayName">ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">granicni_prelaz</property>
+                    <text-property name="displayName">granicni_prelaz</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["granicni_prelaz"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">vrijeme_prelaska</property>
+                    <text-property name="displayName">vrijeme_prelaska</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["vrijeme_prelaska"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">vrsta_prelaska</property>
+                    <text-property name="displayName">vrsta_prelaska</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["vrsta_prelaska"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">komentar</property>
+                    <text-property name="displayName">komentar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["komentar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="470"/>
+            <column id="471"/>
+            <column id="472"/>
+            <column id="473"/>
+            <column id="474"/>
+            <header>
+                <row id="475">
+                    <cell id="476">
+                        <property name="colSpan">5</property>
+                        <property name="rowSpan">1</property>
+                        <label id="481">
+                            <property name="backgroundColor">#FFFF80</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="fontStyle">italic</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Podaci o prelascima stranog lica i granicnim prelazima</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="452">
+                    <cell id="453">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="487">
+                            <text-property name="text">ID evidencije prelaza:</text-property>
+                        </label>
+                    </cell>
+                    <cell id="454">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="488">
+                            <text-property name="text">Naziv prelaza</text-property>
+                        </label>
+                    </cell>
+                    <cell id="455">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="489">
+                            <property name="fontStyle">normal</property>
+                            <text-property name="text">Vrijeme prelaska</text-property>
+                        </label>
+                    </cell>
+                    <cell id="456">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="490">
+                            <text-property name="text">Vrsta prelaska</text-property>
+                        </label>
+                    </cell>
+                    <cell id="457">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="491">
+                            <text-property name="text">Komentar</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="458">
+                    <property name="color">#4D4D4D</property>
+                    <cell id="459">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="482">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">ID</property>
+                        </data>
+                    </cell>
+                    <cell id="460">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="483">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">granicni_prelaz</property>
+                        </data>
+                    </cell>
+                    <cell id="461">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="484">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">vrijeme_prelaska</property>
+                        </data>
+                    </cell>
+                    <cell id="462">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="485">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">vrsta_prelaska</property>
+                        </data>
+                    </cell>
+                    <cell id="463">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="486">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">komentar</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="464">
+                    <cell id="465"/>
+                    <cell id="466"/>
+                    <cell id="467"/>
+                    <cell id="468"/>
+                    <cell id="469"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">granpol.jpg</property>
+            <property name="data">
+                /9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQQDxUUDxIUFBAWEA8UFBYUFBQUFBcVFRUWFxUUFRgZ
+                HCggGBomGxYXIjEhJiorLy4uGyA/ODMsNygtLisBCgoKDg0OFxAQFywcHBwsLCssKywsLCwsLCwvLCws
+                LCwsLCwsLCwsLC0sLCwsLCwsLCwsLCwsLCssLCwsLCwsLP/AABEIAHIA7wMBEQACEQEDEQH/xAAcAAAC
+                AgMBAQAAAAAAAAAAAAAAAQIDBQYHBAj/xABCEAABAwIEAgYFCQcDBQAAAAABAAIRAxIEEyExBUEGIlFU
+                YZEycYGh0RQWUlNicpOx0gcVFyMzguFCorIlNDVDkv/EABsBAQEBAAMBAQAAAAAAAAAAAAABAgMEBQYH
+                /8QANBEBAAIBAgQFAQUIAwEAAAAAAAERAgMSBBMhMQUUQVFSYTJTcYHBBiIzQpGhsdEj4fA1/9oADAMB
+                AAIRAxEAPwDAfuDDfUM8j8V9D5bS+MPi/P8AE/eSfzfw31DPI/FPLaXxg8/xP3kpDo/hvqGeX+U8tpfG
+                F8/xP3kpDo9hvqGeSnltH4wef4n7yUh0ewv1DPJTy2l8Ya89xH3krG9HML3en5KTw2l8YajjeI+crG9G
+                sL3en5LPl9L4tRxvEfOVjejGE7vT8v8AKnl9L4t+c4j5y40vEfVBAIBBJm49YVgdwPRPB92p+X+V63I0
+                /i+b83r/ACkvmpg+7U/JORp+x5rX+cn81MH3an5JyNP2PNa/zkx0Uwfdqfl/lTkafxPNa3zkx0Twfdaf
+                knJ0/ivmtb5ykOieD7rS8j8VOTp/E81rfKUh0SwXdaXkfinI0/ZrzOt8pSHRHBd1peR+KnJ0/ZfM63yl
+                L5oYLutLyPxU5On7L5jV+UmOiGC7rS8j8U5OHsvmNX5SkOh+B7pS8j8VOVh7L5jV+R/M/A90peR+KcrD
+                2XzGr8kvmdge6UvI/FTlYex5jV+Q+Z2B7pS8j8U5WHsvmNX5D5nYHulLyPxTlYex5jV+Q+Z2B7pS8j8U
+                5WHseY1fkPmdge6UvI/FOVh7J5jV+TBL2HzZhRUgoqYRYWNCy2tYFJlqIXNCzLcQqxmMbSGxe8g2sYCX
+                u9QHLxXDqauOEXlNR7zNQ7Whw+WpP0c6HBWgf9m/lqc/ntzjULp8rhPvI/rH+3v87V+JngrQAfkboO39
+                f1R6W6Rp8HM1GpHT6x/s52r7E3gzSJGDcRrr/PjTQ8+RB8knS4SJqdSL6dLj17epGrqz12ou4SwCThCA
+                SACTXEk7AdbdajQ4WZmIziZjr3jt/VJ19WPRJvBmnbBv0gmM8kA6g7mJAJE9ik6XCxU8yOvbrH+/fosa
+                2pPo6jwviTMS2WyHQLmO0c2fDmPFdmJj3t42poZYT26PaWq24RalqYClhgIqQCFJAKNLAFGqMBRU4UKS
+                ARo4UDhFOFAQiiEBCDQ16r59IKKkFFhNqjULWhRuFzAsS3EHiHltN7hu2m9wnaQ0lYyl2NDGMs4iWj4H
+                iDS91TEFxqxLHjrQeQtOkDddXjdDWzxjHTrbPeJ6f373L3NHLHDrP5MlU4zSzGnNqmk2XgFrQ68asAdH
+                aG8oheZj4drxpZRy8Izy6Xc1Xaen5z9XPOtjfeahGrxenDrKtW+wFssaJqBu7u0CTp6lrDw/W3Yxnp47
+                b69Z+zfp9e3X16k62NTUz/2P3zTDJa999mrJNt7nEuO20kmd5JVjw/WnOYyxx239qutRFR/iq7V9U52O
+                36rKvEMO4tc6s4lgpn+nu8F0lot0b6JhcePCcZp7sMdOI3X/ADelR369+/8AZqdTTnrM9kcNxsNm7EPu
+                dTc17gwwS2cqBvADnDyV1vDJ1JitGNsZROMX2iftfnMxH9zHXrvkxuI4gGubUo1KmeHQXOiC0DQ7DfXQ
+                8o8Y9ThtHUwvDLGIw9Ij0n19Z/8AX9HW1JxmOlzLpmDqF1Jj3wCabXHs1AJW3m6mNZTEJ5jYmRHrRijv
+                HaNdtRqllJNcDsRrqPV2pZRhwiZEdqLScgbnYT7O1S1o8wdo038FGkhVbuXCNeY5KLSQqN16w0mdRyUU
+                xVbE3CJiZG/YipCo2JuEQDMiI7VFoxUHaNBJ1G3b7kE5ExOsTHh2opwhRwhSMINCXqvnkgoqTVGoWtWZ
+                ahYxG4XsCxLcJ12TTeO1jx5tIXHl2djQ/iQ5qKIgCTeWggRprymd1yW9eme4V0TdVq0mVqgomtTFSnNp
+                L2zqGiZB0O4HOOa8zxPxXyehlrRpznGPSa9Px+jsaPD8zKMZmrZTGfs1xDS40qlNzQerMtcR48pXiaH7
+                Z8FnEczHLGa69LdjLwzUi9s21qn0exBxxwdjBWFPN9L/AEkNETtA39pXoT4/wsY+Z3zyu3b1/BPJ51tr
+                957eK9DsVhmOqVGNNNu7muB07Y7Fz8F4/wADxeeOnp5/vT6TDh1eE1dOJymOjX17TqhQh2GjR/kNaPqg
+                3/bC6cOln9qUWYcgzoTJ0k8wOfsRk2YcgiCN9TPiTEdmqCAwRAgO0st9UxcR5Iq0YaKbmAiCTb4A6x+a
+                CdfDF5drE07efjv4aqLBnDE3CdC6dz9IHaPBRTo4dzNRBNpBme0mdvHVRUjhnQ4SNXFw1MaOuAIhFTFF
+                11xIJDiQCSQAQBvHaoqIwRJBJHpEvA2Im4AeooI1OHkgwQHFoaOyJdcD4Q73Iq9mFIffOpcZH2dAAPIe
+                9B6lFCoCg5+F6j51JFTCjULGrLULmKNwuYsS5Iehixl2ly4TWUOZ4il6Ubs6rh902yPBbxn+72l3DcRT
+                a197ahrwz5O5j4sqAyHOnltspqae+Ns1tnpMT6wY5V19fR2Po5xQ4hjqWKYGYqmGitTIGoIkPA7D7ivy
+                Hx3wmfD9bdpT/wAeV7Z/Sfw/w+i4XX5uNZfahl/3bRtnJpTO+WyfOE1dTOPCtOd03vluIjmz+DB9Ojbw
+                2tbpDGxGmkgLP7NdfFdG/ef8Sxxv8DJxnNNhJMz1QPIkxy5L9iqNz521eHp3Pa36T2N8yArlPSWXY8SS
+                2m4sEuDHFo31A0/JdSOzpT3ljX4jkx7nEimZuHOo1p+6TPuUKVvxdQtaKcl4L3uGhIa10Cm4mN9RPgi0
+                eKxrwKr2kmna0NgasJpgtcPAkwexQpbWIebazopl1ffQEtcLRPLSfXCCGIxb2Nqua4uphjWtI1LXGmC1
+                402JP5ItPTSxbjXJM5Jc6k3QRc3W7t1Nw9gUVacx1Z9p0a6ludILZcIjUntQUDFEMaW1C6oWPL272wwk
+                m3/TDgAoqdfHOsaaTrj8neTEO6ws1gcwCTCKt+Uta5llUvbd15cHANy3kGeUwgor42o4EUCXOzajmkQR
+                YwCB2QXaeaKzOHrB7GuGzgD58lBYgEAg0AL1XzxhFhNqirGrLS5ijcL2LEuSF7FmXJDnvHWZWMqaaX3R
+                2hw1/MrWMXi9jDK8Yn3Y6rTtPaNwe0LcTa9mydGMa+Zw1N9TiIqXhxc52ZRA69Mid4kz4DmvO8R4PS4r
+                Ry0tX7Ex/SfSYdjR1Jwy3Y93YOD8TZisKyrT9FxMjmHAkOafUZX5v4pwOpwXAY6Gp3x1J/OOtT+b29DV
+                jUz3R6ww3T//AMbX+63/AJBdT9mP/qaH4z/iV43+Bk4xQBcLbS4CT1RLhPMduy/Yp6PnGR6OYO7HUm7h
+                r7j/AGifzhZzy/cTKah1QrrR2dEKgQCBqKkEEgo0koqQUDBRUkUwimoEgEAqNGFFelueDtPKTcu1NtJS
+                1jFY2mpbUYrWUlm24xXMprMy3EL2U1mZbiGndPMHbUp1ANHNLT626j3H3K6c94ejw83hXs1llSBBEt7O
+                zxB5Fckw7CxjnUyH0nOHIOaS1w8DGydJ6SdusOodG+LNw3B6NWlTOSzEObiZIJAMhz2/3FpjsXzPjnhk
+                +IY5aN1lHXH2uPSXo8NrxpYxl6erKdOarX8LrOYQ5rqbS0jYguEEL4b9ndPLT8X0sc4qYmYmPaal6PGT
+                E8PlMdnHKVMtIJLWyJEkGZ01A5etfr0zb51tf7O8EHVqtUDqN6jP7jP5Aea4dae0OPVno3jEm1jiNw0k
+                excVutTzNrkmJaDOpI0AiQPS1J9allBmIJ5sGjd560uI6uu2njullA4sjUtgRU9tpgAapZRsxJyi4xc0
+                w7QgbjkddillJ0q5LHuMNtJiey0EXa76qWtIsxTjbECQ4kRJEECDLhrqpa0kcQ/UwLQSJIgaOA3u158g
+                i0nVxLrobEXOExOga0/SHaUKSNZ8Ey2A8M1B026xN22qLSFTFOBgWmC4SBoYa07FwjfXVQDce4kAAeky
+                46wA5oPbvJPsCKl8udb6ME02kSN3OMDYzbz7UHswtS9gPPY76EbjVFpbaiUUINUFJd63kbTyktdqQpKW
+                u1MUlLajFY2kpbUYrW01mZajFcympMtxDwdIuFfKMM5gHXHWZ94cvbspGW2bdjRmp/Fyr3fmu27ayk8a
+                g7EASOWsrOULbbXuy+C0LxdTPE3XtBLb2ZZJbIgiYXWj97XyrvX6ubtp/msp8VecFWY+kKeDrms7CgvF
+                rHMIc6kHEyW8h4ggLx+J8Kw8/ocZp/bxms69YnpE9I7x6/Tr6OfDXmdLLTntPZp9SqXwLQOQDRuSvoYi
+                urpOu9GeE/JcKxhHXPWf947j2bLpZZbptwZ9ZZDFODGOc70WtJPPQCSssU8VXGMaAHUniQ91tjdmAXOi
+                ftBLKWjF0zUazdxph7erpadteRjWEKVu4lSsa8+i5heOrMAFoPqMuCFLGY6m6oWDV2ZYdJFwbdvz0CFA
+                8Qp2uJ2awPdpylzR6/RKLS3OpGsaRANQNv8AREcufbsY9Sio1caxriwsdAqU2EhoLLqhFoOv2ggjSxNE
+                u9Aw4uAcWdRzmDUNnwB7JhFSo8SpuEWuaHZWjmgSKk2nfbqlQPDY6jVAsALSKxb1REUyA6PafagR4pRE
+                TzfQaBGpdUALPcfYivRiMVTp33f+umHnQaNNwAb49U6epBdhqjXsD2ei4A7Rv2+KhSy1FoWqpTXcldu3
+                n7TFFSzakKSWbUm0lLXam2mpbW1Y2mpbUYrWsWbbiFjWKW1Tg3DcXntg/wBZrdRzeAPSH2o381jhOJit
+                mX5PW19GftQvXpOo2aviS7g1MVOt/wBRq68xFBsR/wDRXVxitfp7fq5b/wCP8/0YJzv5ZaaktBBYJdoe
+                ehEDcrnjvHRj0eDH4zJED+s6B9xp3J7HHkOS6HF8TFbMXZ0NL+aX0G5uqkT0edSnF4bMpuZMXNc2eyRE
+                pZSnFcNbVe1zwCGsqNtI0N9snf7KtlKHcGBqZl7g/Na8R6Ia0W2W7RbInxUspQejbMsMa605TqZcGiTJ
+                abj4i33pZT14fg1Ns6XNJYQDuC1tszzJ118UtaUO6PMc1wJBJptY02iWw5zpGv2vcllL2cHipmXuzM51
+                Q72kEW22z9GBPglrS6rw0OLut6VejV2+rs6vts96llKv3Q4ANFXqNLjTFgMEggXGesBJgaJa0hiOAh7Q
+                0vcBbh2mBqRSLp1nS4OI8EspP9zlpBpPDIzxBZIioWmB1hEWpZSjC9H9nVHzUtw40HVblFska7kMGqll
+                PQ/gxfOZVc6XUpgBpLaZc5rZB3udJPhsEsp6+H4HJYWhxc297mzuA7WJ56zr4pa09NqFC1CmIyl2LdPa
+                WUlm1IUVLXakKSlm1IUktdqQpqW1tWCmpaxim2mpbW18tU3FpBBII2I0IXmPeZvC8Za7SuCHfTYN/vN7
+                fELvaPGZYdMusOtqcPfXFmHcTp/JRSzadgxFStN2sup02AWxdMMPKNd12vN6V779KcPJ1K20w2L4y1ul
+                AEu+m4bfdby9ZXV1uNyy6Y9Ic2HDxHXJhw8lwJMkuEk6k6810nZfVjmrv28aitSyhallCxLKMMSyjsQo
+                BqlrRhqFHai0dqFHaoULUWjtQoWoULUKK1ChahTxZS5LcG0ZStm0xSUs2nlJZtPKS12mKalrtTFNLXak
+                KalrtaoP2Z8N7sfxq/61xcrD2djn6nuY/Zlw3ux/Gr/rU5WHsvP1Pc/4ZcN7sfxq/wCtOXh7Lz9T3P8A
+                hjw3ux/Gr/rTl4HP1Pcfwx4b3Y/jV/1pysTn5+7brFyW4aFiWlCxFoWJZQsUsowxLKFiWUdiWtHYllHY
+                oULUsoWq2tC1LKFqllC1WyhallC1LKV5Ku5jaMlLNoyUtdoylLNqWUlm0xSS12mKSWbTy1LXaeWlm0xT
+                UtaPLSyhYllCxLWhYllCxLKFiWUdiWULEsoWJZR2ItCxLKFillHYllCxLKFiWULUsoWpZQtSyhYllCxL
+                KW5SzbW0ZSWbRlJZtGUlm0ZSWbRlJa7Ty0s2jLSzaeUlm0ZSWu0ZaWbRlpZtGWllDLUsoZatm0ZaWUMt
+                LKGWllDLSyjy0soWKWULEsoWJZQsVsoWJZQsUsoWKlCxChYhQsUsp7MlYtzbRkpZtGSlm0ZKWbRkpZtG
+                Slm0ZSWbSyks2jKSzaMtLNoy0s2jKSzaMpLNoy0s2jLSzaMtLNpZaWbRlpZtGWlptLLS12nlpZtGWlm0
+                ZaWbRlpZtGWlm0ZaWbRlpZtGWlm0ZaWbRlpZtetYcoQCAQCBoEUAqBAkAgSIEAgSAQCIECKAQCAQCAQC
+                AQCAQCAQf//Z
+</property>
+        </structure>
+    </list-property>
+</report>

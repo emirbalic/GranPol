@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GranPol</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btnAddPerson">Dodaj osobu</string>
+    <string name="btnListPerson">Osobe</string>
+    <string name="btnAddVisa">Dodaj vizu</string>
+    <string name="btnAddDeportation">Dodaj protjerivanje</string>
+    <string name="btnAddAsylum">Dodaj azil</string>
+    <string name="title_activity_lista_osoba">Lista stranaca</string>
+    <string name="title_activity_dodaj_osobu">Dodaj stranca</string>
+    <string name="txtFirstnameHint">Ime</string>
+    <string name="txtSurnameHint">Prezime</string>
+    <string name="txtParentNameHint">Ime jednog roditelja</string>
+    <string name="txtDateHint">Datum rođenja</string>
+    <string name="txtDateOfAsylum">Datum azila</string>
+    <string name="txtTypeOfAsylum">Vrsta azila</string>
+    <string name="txtDateOfVisa">Datum vize</string>
+    <string name="txtTypeOfVisa">Vrsta vize</string>
+    <string name="txtDateOfDeportation">Datum protjerivanja</string>
+    <string name="txtTypeOfDeportation">Vrsta protjerivanja</string>
+    <string name="txtEmailHint">Email</string>
+    <string name="txtJibHint">JIB</string>
+    <string name="lblSex">Spol</string>
+    <string name="rbtnMale">Muški</string>
+    <string name="rbtnFemale">Ženski</string>
+    <string name="txtPhoneHint">Telefon</string>
+    <string name="txtAdressHint">Adresa</string>
+
+    
+    <string name="menuVisa">Dodaj vizu</string>
+    <string name="menuAsylum">Dodaj azil</string>
+    <string name="menuDetails">Detalji</string>
+    <string name="menuDeportation">Dodaj deportaciju</string>
+    <string name="title_activity_detalji_stranca">DetaljiStranca</string>
+    <string name="title_activity_dodaj_vizu">DodajVizu</string>
+    <string name="title_activity_dodaj_azil">DodajAzil</string>
+    <string name="title_activity_dodaj_deportaciju">DodajDeportaciju</string>
+
+</resources>

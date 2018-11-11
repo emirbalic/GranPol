@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/details" android:title="@string/menuDetails"></item>
+    <item android:id="@+id/asylum" android:title="@string/menuAsylum"></item>
+    <item android:id="@+id/visa" android:title="@string/menuVisa"></item>
+    <item android:id="@+id/deportation" android:title="@string/menuDeportation"></item>    
+
+</menu>

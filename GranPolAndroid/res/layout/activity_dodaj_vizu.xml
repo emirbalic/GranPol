@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DodajVizu" >
+
+    <TextView
+        android:id="@+id/lblIme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/txtFirstnameHint"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Spinner
+        android:id="@+id/spinnerVrstaVize"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDeportacija"
+        android:layout_below="@+id/lblTipVize"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btnAddViza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="OnClick_AddViza"
+        android:text="@string/btnAddVisa" />
+
+    <TextView
+        android:id="@+id/lblVizaFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblIme"
+        android:layout_below="@+id/lblIme"
+        android:layout_marginTop="15dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblPrezime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblVizaFirstName"
+        android:layout_below="@+id/lblVizaFirstName"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtSurnameHint"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/lblVizaSecondName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblPrezime"
+        android:layout_below="@+id/lblPrezime"
+        android:layout_marginTop="15dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblDatumVize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViza"
+        android:layout_below="@+id/lblVizaSecondName"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtDateOfVisa"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/txtViza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerVrstaVize"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lblDatumVize"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="date" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblTipVize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerVrstaVize"
+        android:layout_below="@+id/txtViza"
+        android:layout_marginTop="31dp"
+        android:text="@string/txtTypeOfVisa"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

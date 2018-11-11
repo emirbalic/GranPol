@@ -1,0 +1,5 @@
+SELECT PRELAZAKGRANICE.`Prelazak_GraniceId`, GRANICNIPRELAZ.`Naziv`,
+  PRELAZAKGRANICE.`Vrijeme`, VRSTAPRELASKAGRANICE.`Naziv`, PRELAZAKGRANICE.`Komentar`
+  FROM
+       `si_proj021_db1`.`prelazak_granice` AS PRELAZAKGRANICE JOIN `si_proj021_db1`.`stranac` AS STRANAC ON PRELAZAKGRANICE.`stranac_StranacId` = STRANAC.`StranacId` JOIN `si_proj021_db1`.`vrsta_prelaska_granice` AS VRSTAPRELASKAGRANICE ON PRELAZAKGRANICE.`vrsta_Prelaska_Granice_Vrsta_Prelaska_GraniceId` = VRSTAPRELASKAGRANICE.`Vrsta_Prelaska_GraniceId` JOIN `si_proj021_db1`.`granicni_prelaz` AS GRANICNIPRELAZ ON PRELAZAKGRANICE.`granicniPrelaz_Granicni_PrelazId` = GRANICNIPRELAZ.`Granicni_PrelazId`
+ 

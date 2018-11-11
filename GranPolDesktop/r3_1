@@ -1,0 +1,6 @@
+SELECT STRANAC.`StranacId`, STRANAC.`Ime`, STRANAC.`Ime_Jednog_Roditelja`,
+  STRANAC.`Prezime`, STRANAC.`Datum_Rodjenja`, STRANAC.`Telefon`,
+  STRANAC.`Email`, STRANAC.`Ulica_I_Broj`, GRAD.`Naziv`, GRAD.`Zip`,
+  DRZAVA.`Naziv`, DRZAVA.`Kod`
+  FROM
+       `si_proj021_db1`.`stranac` AS STRANAC JOIN `si_proj021_db1`.`grad` AS GRAD ON STRANAC.`grad_GradId` = GRAD.`GradId` JOIN `si_proj021_db1`.`drzava` AS DRZAVA ON STRANAC.`drzava_DrzavaId` = DRZAVA.`DrzavaId`

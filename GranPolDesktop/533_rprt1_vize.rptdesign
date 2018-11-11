@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.2.v20140211-1400 Build &lt;4.3.2.v20140211-1526></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/first_report.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="248">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://redmine.fit.ba:3306/si_proj021_db1</property>
+            <property name="odaUser">si_proj021_user1</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Z3JhTmljbmFQ</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="249">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">VizaId</property>
+                    <text-property name="displayName">VizaId</text-property>
+                    <text-property name="heading">VizaId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Datum</property>
+                    <text-property name="displayName">Datum izdavanja</text-property>
+                    <text-property name="heading">Datum</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Naziv</property>
+                    <text-property name="displayName">NazivVize</text-property>
+                    <text-property name="heading">Naziv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Trajanje_Broj_Dana</property>
+                    <text-property name="displayName">Trajanje vize</text-property>
+                    <text-property name="heading">Trajanje_Broj_Dana</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ime</property>
+                    <text-property name="displayName">Ime</text-property>
+                    <text-property name="heading">Ime</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ime_Jednog_Roditelja</property>
+                    <text-property name="displayName">Ime_Jednog_Roditelja</text-property>
+                    <text-property name="heading">Ime_Jednog_Roditelja</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Prezime</property>
+                    <text-property name="displayName">Prezime</text-property>
+                    <text-property name="heading">Prezime</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Datum_Rodjenja</property>
+                    <text-property name="displayName">Datum_Rodjenja</text-property>
+                    <text-property name="heading">Datum_Rodjenja</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Jedinstveni_Identifikacioni_Broj</property>
+                    <text-property name="displayName">Jedinstveni_Identifikacioni_Broj</text-property>
+                    <text-property name="heading">Jedinstveni_Identifikacioni_Broj</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Naziv_10</property>
+                    <text-property name="displayName">Drzava</text-property>
+                    <text-property name="heading">Naziv</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">VizaId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Datum</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Naziv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Trajanje_Broj_Dana</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Ime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Ime_Jednog_Roditelja</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Prezime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Datum_Rodjenja</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Naziv_10</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">VizaId</property>
+                    <property name="nativeName">VizaId</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Datum</property>
+                    <property name="nativeName">Datum</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Naziv</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Trajanje_Broj_Dana</property>
+                    <property name="nativeName">Trajanje_Broj_Dana</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Ime</property>
+                    <property name="nativeName">Ime</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Ime_Jednog_Roditelja</property>
+                    <property name="nativeName">Ime_Jednog_Roditelja</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Prezime</property>
+                    <property name="nativeName">Prezime</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Datum_Rodjenja</property>
+                    <property name="nativeName">Datum_Rodjenja</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                    <property name="nativeName">Jedinstveni_Identifikacioni_Broj</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Naziv_10</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT VIZA.`VizaId`, VIZA.`Datum`, VRSTAVIZE.`Naziv`, VRSTAVIZE.`Trajanje_Broj_Dana`,
+  STRANAC.`Ime`, STRANAC.`Ime_Jednog_Roditelja`, STRANAC.`Prezime`,
+  STRANAC.`Datum_Rodjenja`, STRANAC.`Jedinstveni_Identifikacioni_Broj`,
+  DRZAVA.`Naziv`
+  FROM
+       `si_proj021_db1`.`viza` AS VIZA JOIN `si_proj021_db1`.`vrsta_vize` AS VRSTAVIZE ON VIZA.`vrsta_Vize_Vrsta_VizeId` = VRSTAVIZE.`Vrsta_VizeId` JOIN `si_proj021_db1`.`stranac` AS STRANAC ON VIZA.`stranac_StranacId` = STRANAC.`StranacId` JOIN `si_proj021_db1`.`drzava` AS DRZAVA ON STRANAC.`drzava_DrzavaId` = DRZAVA.`DrzavaId`
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>VizaId</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>VizaId</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>VizaId</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Datum</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Datum</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Datum</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Naziv</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Naziv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Naziv</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Trajanje_Broj_Dana</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Trajanje_Broj_Dana</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Trajanje_Broj_Dana</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ime</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ime_Jednog_Roditelja</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ime_Jednog_Roditelja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ime_Jednog_Roditelja</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Prezime</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Prezime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Prezime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Datum_Rodjenja</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Datum_Rodjenja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Datum_Rodjenja</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Jedinstveni_Identifikacioni_Broj</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Jedinstveni_Identifikacioni_Broj</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Jedinstveni_Identifikacioni_Broj</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Naziv</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Naziv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Naziv</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="110">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="246">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="247">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="245">
+            <property name="backgroundColor">#C0C0C0</property>
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">x-large</property>
+            <property name="fontWeight">bold</property>
+            <property name="fontStyle">italic</property>
+            <property name="color">#004040</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">Podaci o izdatim vizama</text-property>
+        </label>
+        <table id="250">
+            <property name="width">7.583333333333333in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">VizaId</property>
+                    <text-property name="displayName">VizaId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["VizaId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Datum</property>
+                    <text-property name="displayName">Datum izdavanja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Datum"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">Naziv</property>
+                    <text-property name="displayName">NazivVize</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Naziv"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Trajanje_Broj_Dana</property>
+                    <text-property name="displayName">Trajanje vize</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Trajanje_Broj_Dana"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Ime</property>
+                    <text-property name="displayName">Ime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Ime_Jednog_Roditelja</property>
+                    <text-property name="displayName">Ime_Jednog_Roditelja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ime_Jednog_Roditelja"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Prezime</property>
+                    <text-property name="displayName">Prezime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Prezime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Datum_Rodjenja</property>
+                    <text-property name="displayName">Datum_Rodjenja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Datum_Rodjenja"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">Jedinstveni_Identifikacioni_Broj</property>
+                    <text-property name="displayName">Jedinstveni_Identifikacioni_Broj</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Jedinstveni_Identifikacioni_Broj"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Naziv_10</property>
+                    <text-property name="displayName">Drzava</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Naziv_10"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="304">
+                <property name="width">0.3958333333333333in</property>
+            </column>
+            <column id="305">
+                <property name="width">0.90625in</property>
+            </column>
+            <column id="306">
+                <property name="width">0.8541666666666666in</property>
+            </column>
+            <column id="307">
+                <property name="width">0.5416666666666666in</property>
+            </column>
+            <column id="308">
+                <property name="width">0.6875in</property>
+            </column>
+            <column id="310">
+                <property name="width">1.2708333333333333in</property>
+            </column>
+            <column id="311">
+                <property name="width">1.28125in</property>
+            </column>
+            <column id="312">
+                <property name="width">1.6458333333333333in</property>
+            </column>
+            <header>
+                <row id="313">
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="height">0.28125in</property>
+                    <cell id="314"/>
+                    <cell id="315"/>
+                    <cell id="316"/>
+                    <cell id="317"/>
+                    <cell id="318"/>
+                    <cell id="319"/>
+                    <cell id="320"/>
+                    <cell id="321"/>
+                </row>
+                <row id="322">
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="height">0.28125in</property>
+                    <cell id="323"/>
+                    <cell id="324"/>
+                    <cell id="325"/>
+                    <cell id="326"/>
+                    <cell id="327"/>
+                    <cell id="328"/>
+                    <cell id="329"/>
+                    <cell id="330"/>
+                </row>
+                <row id="251">
+                    <property name="fontWeight">bold</property>
+                    <property name="fontStyle">italic</property>
+                    <property name="height">0.28125in</property>
+                    <cell id="252">
+                        <label id="253">
+                            <text-property name="text">ID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="254">
+                        <label id="255">
+                            <text-property name="text">Datum</text-property>
+                        </label>
+                    </cell>
+                    <cell id="256">
+                        <label id="257">
+                            <text-property name="text">Naziv</text-property>
+                        </label>
+                    </cell>
+                    <cell id="258">
+                        <label id="259">
+                            <text-property name="text">Dana</text-property>
+                        </label>
+                    </cell>
+                    <cell id="260">
+                        <label id="261">
+                            <text-property name="text">Ime</text-property>
+                        </label>
+                    </cell>
+                    <cell id="264">
+                        <label id="265">
+                            <text-property name="text">Prezime</text-property>
+                        </label>
+                    </cell>
+                    <cell id="266">
+                        <label id="267">
+                            <text-property name="text">Datum rodjenja</text-property>
+                        </label>
+                    </cell>
+                    <cell id="268">
+                        <label id="269">
+                            <text-property name="text">Jedinstveni IB</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="272">
+                    <property name="textAlign">center</property>
+                    <property name="height">0.4375in</property>
+                    <cell id="273">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="274">
+                            <property name="resultSetColumn">VizaId</property>
+                        </data>
+                    </cell>
+                    <cell id="275">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="276">
+                            <property name="resultSetColumn">Datum</property>
+                        </data>
+                    </cell>
+                    <cell id="277">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="278">
+                            <property name="resultSetColumn">Naziv</property>
+                        </data>
+                    </cell>
+                    <cell id="279">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="280">
+                            <property name="resultSetColumn">Trajanje_Broj_Dana</property>
+                        </data>
+                    </cell>
+                    <cell id="281">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="282">
+                            <property name="resultSetColumn">Ime</property>
+                        </data>
+                    </cell>
+                    <cell id="285">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="286">
+                            <property name="resultSetColumn">Prezime</property>
+                        </data>
+                    </cell>
+                    <cell id="287">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="288">
+                            <property name="resultSetColumn">Datum_Rodjenja</property>
+                        </data>
+                    </cell>
+                    <cell id="289">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="290">
+                            <property name="resultSetColumn">Jedinstveni_Identifikacioni_Broj</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="293">
+                    <property name="height">0.16666666666666666in</property>
+                    <cell id="294"/>
+                    <cell id="295"/>
+                    <cell id="296"/>
+                    <cell id="297"/>
+                    <cell id="298"/>
+                    <cell id="300"/>
+                    <cell id="301"/>
+                    <cell id="302"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

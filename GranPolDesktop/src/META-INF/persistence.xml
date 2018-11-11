@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="GranPol" transaction-type="RESOURCE_LOCAL">
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<!-- Podaci o bazi podataka -->
+			<property name="javax.persistence.jdbc.url"	value="jdbc:mysql://redmine.fit.ba:3306/si_proj021_db1" />   <!--    redmine.fit.ba:3306/si_proj021_db1   -->
+			<property name="javax.persistence.jdbc.user" value="si_proj021_user1" />		<!--    si_proj021_user1   -->
+			<property name="javax.persistence.jdbc.password" value="graNicnaP" /> 	 <!--    graNicnaP   -->
+			<!-- <property name="javax.persistence.jdbc.driver"
+				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> -->
+			<!-- hiberante dialect -->
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2008Dialect" /> -->
+			<!-- JDBC connection pool (use the built-in) -->
+			<property name="connection.pool_size" value="1" />
+			<!-- Ispis SQL koda u konzolu -->
+			<property name="hibernate.show_sql" value="true" />
+			<!-- formatiranje SQL koda ispisanog u konzolni prozor -->
+			<property name="hibernate.format_sql" value="false" />
+			<!-- Vrijednost "update" kreira tabele ako nepostoje -->
+			<property name="hibernate.hbm2ddl.auto" value="none" />  <!-- update create   none-->
+			<!-- Enable Hibernate's automatic session context management -->
+			<property name="current_session_context_class" value="thread" />
+			<!-- Disable the second-level cache -->
+			<property name="cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />
+			<!-- automatsko prepoznavanje JPA klasa -->
+			<property name="hibernate.archive.autodetection" value="class, hbm" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,5 @@
+SELECT AZIL.`AzilId`, AZIL.`Datum`, VRSTA.`Naziv`, STRANAC.`Ime`,
+  STRANAC.`Prezime`, STRANAC.`Jedinstveni_Identifikacioni_Broj`,
+  DRZAVA.`Naziv`
+  FROM
+       `si_proj021_db1`.`azil` AS AZIL JOIN `si_proj021_db1`.`vrsta_azila` AS VRSTA ON AZIL.`vrsta_Azila_Vrsta_AzilaId` = VRSTA.`Vrsta_AzilaId` JOIN `si_proj021_db1`.`stranac` AS STRANAC ON AZIL.`stranac_StranacId` = STRANAC.`StranacId` JOIN `si_proj021_db1`.`drzava` AS DRZAVA ON STRANAC.`drzava_DrzavaId` = DRZAVA.`DrzavaId`

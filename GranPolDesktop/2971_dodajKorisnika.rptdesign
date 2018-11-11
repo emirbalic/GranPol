@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.2.v201301221637 Build &lt;4.2.2.v20130206-1509></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">10</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">10</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">10</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="Id Korisnika" id="9">
+            <text-property name="promptText">p1</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://redmine.fit.ba:3306/si_proj021_db1</property>
+            <property name="odaUser">si_proj021_user1</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Z3JhTmljbmFQ&#13;
+</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ds1" id="8">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Korisnicko_Ime</property>
+                    <property name="alias">korisnicko_ime</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Naziv</property>
+                    <property name="alias">naziv_uloge</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ime</property>
+                    <property name="alias">ime_korisnika</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ime_Jednog_Roditelja</property>
+                    <property name="alias">ime_roditelja</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JMBG</property>
+                    <property name="alias">jmbg</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Prezime</property>
+                    <property name="alias">prezime_korisnika</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Spol</property>
+                    <property name="alias">spol_korisnika</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Telefon</property>
+                    <property name="alias">telefon</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ulica_I_Broj</property>
+                    <property name="alias">ulica_broj_korisnika</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Datum_Rodjenja</property>
+                    <property name="alias">datum_rodjenja_korisnika</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Naziv_11</property>
+                    <property name="alias">naziv_organa</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Ulica_i_broj</property>
+                    <property name="alias">ulica_broj_organa</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">p1</property>
+                    <property name="paramName">Id Korisnika</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">0</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">korisnicko_ime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">naziv_uloge</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">ime_korisnika</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">ime_roditelja</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">jmbg</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">prezime_korisnika</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">spol_korisnika</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">telefon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">ulica_broj_korisnika</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">datum_rodjenja_korisnika</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">naziv_organa</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">ulica_broj_organa</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Korisnicko_Ime</property>
+                    <property name="nativeName">Korisnicko_Ime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Naziv</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Ime</property>
+                    <property name="nativeName">Ime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Ime_Jednog_Roditelja</property>
+                    <property name="nativeName">Ime_Jednog_Roditelja</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">JMBG</property>
+                    <property name="nativeName">JMBG</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Prezime</property>
+                    <property name="nativeName">Prezime</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Spol</property>
+                    <property name="nativeName">Spol</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Telefon</property>
+                    <property name="nativeName">Telefon</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Ulica_I_Broj</property>
+                    <property name="nativeName">Ulica_I_Broj</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Datum_Rodjenja</property>
+                    <property name="nativeName">Datum_Rodjenja</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Naziv_11</property>
+                    <property name="nativeName">Naziv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Ulica_i_broj</property>
+                    <property name="nativeName">Ulica_i_broj</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT K.`Korisnicko_Ime`, U.`Naziv`, OS.`Ime`, OS.`Ime_Jednog_Roditelja`,
+  OS.JMBG, OS.`Prezime`, OS.`Spol`, OS.`Telefon`, OS.`Ulica_I_Broj`,
+  OS.`Datum_Rodjenja`, `si_proj021_db1`.`organ`.`Naziv`, `si_proj021_db1`.`organ`.`Ulica_i_broj`
+  FROM
+       `si_proj021_db1`.`korisnik` AS K JOIN `si_proj021_db1`.`uloga` AS U ON K.`uloga_UlogaId` = U.`UlogaId` JOIN `si_proj021_db1`.`organ` ON K.`organ_OrganId` = `si_proj021_db1`.`organ`.`OrganId` JOIN `si_proj021_db1`.`osoba` AS OS ON K.`osoba_OsobaId` = OS.`OsobaId`
+WHERE K.KorisnikId=?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Korisnicko_Ime</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Korisnicko_Ime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Korisnicko_Ime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Naziv</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Naziv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Naziv</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ime</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ime_Jednog_Roditelja</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ime_Jednog_Roditelja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ime_Jednog_Roditelja</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>JMBG</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>JMBG</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>JMBG</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Prezime</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Prezime</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Prezime</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Spol</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Spol</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Spol</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Telefon</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Telefon</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Telefon</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ulica_I_Broj</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ulica_I_Broj</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ulica_I_Broj</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Datum_Rodjenja</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Datum_Rodjenja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Datum_Rodjenja</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Naziv</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Naziv</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Naziv</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Ulica_i_broj</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Ulica_i_broj</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Ulica_i_broj</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ds2" id="10">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">korisnik_KorisnikId</property>
+                    <property name="alias">korisnikId</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Deleted</property>
+                    <property name="alias">statusKorisnika</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Dogadjaj</property>
+                    <property name="alias">vrstaDogadjaja</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Vrijeme_Dogadjaja</property>
+                    <property name="alias">vrijemeDogadjaja</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">pr2</property>
+                    <property name="paramName">Id Korisnika</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">korisnikId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">statusKorisnika</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">vrstaDogadjaja</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">vrijemeDogadjaja</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">korisnik_KorisnikId</property>
+                    <property name="nativeName">korisnik_KorisnikId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Deleted</property>
+                    <property name="nativeName">Deleted</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Dogadjaj</property>
+                    <property name="nativeName">Dogadjaj</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Vrijeme_Dogadjaja</property>
+                    <property name="nativeName">Vrijeme_Dogadjaja</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT log.korisnik_KorisnikId, log.Deleted, log.Dogadjaj, log.Vrijeme_Dogadjaja
+  FROM `log`
+  WHERE log.korisnik_KorisnikId = ?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LogId</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LogId</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LogId</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Deleted</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Deleted</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Deleted</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Dogadjaj</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Dogadjaj</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Dogadjaj</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Vrijeme_Dogadjaja</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Vrijeme_Dogadjaja</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Vrijeme_Dogadjaja</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>korisnik_KorisnikId</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>korisnik_KorisnikId</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>korisnik_KorisnikId</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="showHeaderOnFirst">true</property>
+            <property name="showFooterOnLast">true</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="13">
+            <column id="14"/>
+            <column id="15"/>
+            <column id="16"/>
+            <row id="17">
+                <cell id="18">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <label id="29">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">MINISTARSTVO SIGURNOSTI BiH</text-property>
+                    </label>
+                    <label id="30">
+                        <property name="fontSize">13pt</property>
+                        <text-property name="text">GRANIČNA POLICIJA</text-property>
+                    </label>
+                    <data id="31">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">naziv_organa</property>
+                                <text-property name="displayName">naziv_organa</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["naziv_organa"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">naziv_organa</property>
+                    </data>
+                    <data id="32">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ulica_broj_organa</property>
+                                <text-property name="displayName">ulica_broj_organa</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ulica_broj_organa"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">ulica_broj_organa</property>
+                    </data>
+                </cell>
+                <cell id="20">
+                    <property name="textAlign">right</property>
+                    <image id="12">
+                        <property name="height">0.9166666666666666in</property>
+                        <property name="width">1.9270833333333333in</property>
+                        <property name="source">embed</property>
+                        <property name="imageName">1.2.granpol-logo.jpg</property>
+                    </image>
+                </cell>
+            </row>
+            <row id="21">
+                <cell id="22"/>
+                <cell id="23"/>
+                <cell id="24"/>
+            </row>
+            <row id="25">
+                <cell id="26">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <label id="33">
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Ispis evidencije loga korisnika</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="34">
+                <cell id="35"/>
+                <cell id="36"/>
+                <cell id="37"/>
+            </row>
+        </grid>
+        <grid id="38">
+            <property name="dataSet">ds1</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">korisnicko_ime</property>
+                    <text-property name="displayName">korisnicko_ime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["korisnicko_ime"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">naziv_uloge</property>
+                    <text-property name="displayName">naziv_uloge</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["naziv_uloge"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ime_korisnika</property>
+                    <text-property name="displayName">ime_korisnika</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ime_korisnika"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ime_roditelja</property>
+                    <text-property name="displayName">ime_roditelja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ime_roditelja"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">jmbg</property>
+                    <text-property name="displayName">jmbg</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["jmbg"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">prezime_korisnika</property>
+                    <text-property name="displayName">prezime_korisnika</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["prezime_korisnika"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">spol_korisnika</property>
+                    <text-property name="displayName">spol_korisnika</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["spol_korisnika"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">telefon</property>
+                    <text-property name="displayName">telefon</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["telefon"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ulica_broj_korisnika</property>
+                    <text-property name="displayName">ulica_broj_korisnika</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ulica_broj_korisnika"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">datum_rodjenja_korisnika</property>
+                    <text-property name="displayName">datum_rodjenja_korisnika</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["datum_rodjenja_korisnika"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">naziv_organa</property>
+                    <text-property name="displayName">naziv_organa</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["naziv_organa"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ulica_broj_organa</property>
+                    <text-property name="displayName">ulica_broj_organa</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ulica_broj_organa"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="39"/>
+            <column id="40"/>
+            <column id="41"/>
+            <column id="42"/>
+            <row id="43">
+                <cell id="44">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                    <label id="74">
+                        <property name="fontSize">10pt</property>
+                        <text-property name="text">Podaci o korisniku </text-property>
+                    </label>
+                </cell>
+                <cell id="71"/>
+                <cell id="72"/>
+                <cell id="73"/>
+            </row>
+            <row id="48">
+                <cell id="49">
+                    <label id="82">
+                        <text-property name="text">Korisničko ime:</text-property>
+                    </label>
+                </cell>
+                <cell id="50">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="75">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">korisnicko_ime</property>
+                                <text-property name="displayName">korisnicko_ime</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["korisnicko_ime"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">korisnicko_ime</property>
+                    </data>
+                </cell>
+                <cell id="51">
+                    <label id="83">
+                        <text-property name="text">Matični broj:</text-property>
+                    </label>
+                </cell>
+                <cell id="52">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="87">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">jmbg</property>
+                                <text-property name="displayName">jmbg</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["jmbg"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">jmbg</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="53">
+                <cell id="54">
+                    <label id="59">
+                        <text-property name="text">Ime:</text-property>
+                    </label>
+                </cell>
+                <cell id="55">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="67">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ime_korisnika</property>
+                                <text-property name="displayName">ime_korisnika</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ime_korisnika"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">ime_korisnika</property>
+                    </data>
+                </cell>
+                <cell id="56">
+                    <label id="84">
+                        <text-property name="text">Datum rođenja:</text-property>
+                    </label>
+                </cell>
+                <cell id="57">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="88">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">datum_rodjenja_korisnika</property>
+                                <text-property name="displayName">datum_rodjenja_korisnika</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["datum_rodjenja_korisnika"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">datum_rodjenja_korisnika</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="61">
+                <cell id="62">
+                    <label id="60">
+                        <text-property name="text">Prezime:</text-property>
+                    </label>
+                </cell>
+                <cell id="63">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="68">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">prezime_korisnika</property>
+                                <text-property name="displayName">prezime_korisnika</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["prezime_korisnika"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">prezime_korisnika</property>
+                    </data>
+                </cell>
+                <cell id="64">
+                    <label id="96">
+                        <text-property name="text">Telefon:</text-property>
+                    </label>
+                </cell>
+                <cell id="65">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="90">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">telefon</property>
+                                <text-property name="displayName">telefon</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["telefon"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">telefon</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="77">
+                <cell id="78">
+                    <label id="66">
+                        <text-property name="text">Ime jednog roditelja:</text-property>
+                    </label>
+                </cell>
+                <cell id="79">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <data id="76">
+                        <property name="dataSet">ds1</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ime_roditelja</property>
+                                <text-property name="displayName">ime_roditelja</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ime_roditelja"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">ime_roditelja</property>
+                    </data>
+                </cell>
+                <cell id="80">
+                    <label id="97">
+                        <text-property name="text">Spol:</text-property>
+                    </label>
+                </cell>
+                <cell id="81">
+                    <property name="borderBottomStyle">dotted</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <text-data id="100">
+                        <expression name="valueExpr">if(row["spol_korisnika"]==1)&#13;
+"Muški"&#13;
+else&#13;
+"Ženski"</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="135">
+                <cell id="136"/>
+                <cell id="137"/>
+                <cell id="138"/>
+                <cell id="139"/>
+            </row>
+        </grid>
+        <table id="140">
+            <property name="dataSet">ds2</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">korisnikId</property>
+                    <text-property name="displayName">korisnikId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["korisnikId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">statusKorisnika</property>
+                    <text-property name="displayName">statusKorisnika</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["statusKorisnika"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">vrstaDogadjaja</property>
+                    <text-property name="displayName">vrstaDogadjaja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["vrstaDogadjaja"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">vrijemeDogadjaja</property>
+                    <text-property name="displayName">vrijemeDogadjaja</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["vrijemeDogadjaja"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <column id="150"/>
+            <column id="151"/>
+            <header>
+                <row id="152">
+                    <cell id="153">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <label id="155">
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="borderBottomColor">#C0C0C0</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">#C0C0C0</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">#C0C0C0</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">#C0C0C0</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Ispis podataka o aktivnostima korisnika</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="141">
+                    <cell id="142">
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <label id="156">
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Vrsta aktivnosti</text-property>
+                        </label>
+                    </cell>
+                    <cell id="143">
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <label id="157">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Vrijeme aktivnosti</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="144">
+                    <cell id="145">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="158">
+                            <property name="resultSetColumn">vrstaDogadjaja</property>
+                        </data>
+                    </cell>
+                    <cell id="146">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="159">
+                            <property name="resultSetColumn">vrijemeDogadjaja</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="147">
+                    <cell id="148"/>
+                    <cell id="149"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">1.2.granpol-logo.jpg</property>
+            <property name="data">
+                /9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwM
+DA
+                wMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAg
+ICAg
+                ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCACPASsDAREA
+AhEBAx
+                EB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAECAwQFBwYI/8QAVBAAAgEDAwEFAwgFBgkICwAA
+AQIDAAQR
+                BRITIQYHIjFBFFFVFRcjMkJhpNMWUnGBoySRobHS1DM0VmJjkpTB0QglN0NFc7PCU3SC
+hJOisrTh4v
+                D/xAAcAQEBAQADAQEBAAAAAAAAAAAAAQIDBAUGBwj/xAA5EQACAQMBBAcHAgUFAQAA
+AAAAEQECAxIE
+                ITFRoQUUFUFScdEGEyIyYYGxQvAHIzRiwTM1kbLx4f/aAAwDAQACEQMRAD8A8N82
+3Yv4d/Gn/t19X2
+                bY8POfU/O+3dX4+VPoP5tuxfw7+NP/AG6dm2PDzn1Hbur8fKn0GO7XsV8O/jT/
+ANunZtjw859R27q/
+                Hyp9CXzadifh38af+3Ts2x4ec+pe3NX4+VPoSHdl2I+G/wAaf8yp2bY8POfU
+vbmr8fKn0Jjuw7D/AA
+                3+NcfmVOzrHh5z6mu29X4+VPoWL3Xdhj/2b/HuPzKnZ1nw859TXbWq8fKn
+0LF7q+wh/wCzP49x+ZWe
+                z7PDnJrtnVeLlHoWr3Udgvhf8e4/MqdQs8Ocmo6Y1Xi5R6Fi90vYD4V/
+HufzKnULPDnJrtfU+LlHof
+                OlfNn3AUAUAUAUAUB3Tu17tOxetdidO1LUtO572fm5ZeadM7J3RfCj
+qv1VHpXr6XTW6rcTMbT5vX6+
+                9bvTTTKiF3RwPT/M33c/CPxF1+bXY6la4fk6famo8XKPQPmb7uPh
+H4i6/NqdStcPyO1NR4uUegfM13
+                c/CPxF1+bTqVrh+R2pqPFyj0JDua7uPhH4i6/Np1O1w/Je1NR4
+uUeg/mZ7t/hH4i6/Np1O1w/Je09R
+                4uUehL5mO7b4P+IuvzanU7XD8jtO/wCLlHoSHct3a/B/xN1+
+bU6na4fkvad/xco9CQ7le7T4P+Juvz
+                adTt8PyXtK/wCLlHoTHcn3Z/BvxN1+bU6pb4fk12lf8XKP
+Ql8yXdj8G/E3f5tTqlvgXtG/4uUegx3I
+                92Pwb8Td/m06pb4F7Rv+LlHoS+ZDuw+C/ibv82p1W3wL
+2he8XKPQmO47uv8Agv4m7/NqdVt8C9oXuP
+                KA+Y7uu+C/ibv82nVbfAdoXuPKCQ7je674L+Ju/wA2
+p1W3wL1+9x5QP5jO634J+Ju/zadVt8B1+9x5
+                QHzGd1vwT8Vd/m06rb4F6/e48oD5jO634J+Ku/za
+dVt8B1+9x5QHzGd1vwT8Vd/m06rb4Dr97jygPm
+                M7rfgn4q7/ADadVt8CdoXuPKA+Yzuu+C/ibv8A
+Np1W3wHX73HlBpK+jPiR1ATFCklqFLAKhosUVDZa
+                i1k1BkItZOSC5VrJuILfCqlmIVVGSx6AD7zW
+JlHLRRNUqN580DsLPjxarYo32l/lLYPuysDKf3EivB
+                jo29wPvOuUB+gsvxex/F/3enZl4dcoD9BZ
+fi9j+L/u9OzLw65QH6Cy/F7H8X/d6dmXh1ygP0Fl+L2P
+                4v8Au9OzLw65QH6Cy/F7H8X/AHenZl4d
+coPoHuqsjZ9g9OszLHM8BnDPEdy+Kd3HngjwsDggGvR01E
+                0UYzvg+a6S23Zq7pX4PW7K5zooW2hB
+7aFGFoCW2oUltoUkFqFJgVDRYorJqCQFCkwtQpICoUmBUNDx
+                QEgKhR4oB7aFDbQBigDbQBg0Byav
+cPkxioUlQEwKhotUVDUFqism4LkFZk3BkIKwckCu7y0sbZrq7l
+                EMEfm7f1AeZP3CsVVHZsWKrkqD
+xV1r0/aG547iKa07N4JMuTFvCsAWeTZKpx1O3yz6k15fSGpm3T/L
+                mmb3h393DKmdvHktsfSaLR00
++XEwLvQuxcFq8ovpzMiDEDsE3yooklCnibAKjYuftEeeMHo2ekekK6
+                1hTjM742qJ2Uv4o2v4pX6Y
+nc3Hdqs2YjfL/f0L4+zPZNHjSa6lw/ALh3ZojDvG6TH0LZdcqNpHrny6
+                jhq6W10xM0007Mkoicls
+j9cfDO2XHlv2TqNPa754fbkY0XZ3s1Ktu6XNyBzwtfIwG6KycgSSHajKrD
+                6wyfq+YrsV9Kaumaom
+mj5asP7rkbo2zEzHdsj5t0mIsW5W2d8PyJv2c7MS2Ly201zBIoIzdkJtlw/g
+                l+j2qDiMg7uu7H7M
+U9Kaym5EVxRVH9m34fh20/E5/VEwtmL89TYtzGxx5/8Anl/yU6l2d0SPUbe1s5
+                ZDA1y0U88jHcIw
+fVOJdp2YwcnPurm0nSmoqtVV3IjLBxERsfnnt274WziYuWKMlG5/vuMmy7N9i59Q
+                ijbU5zZvbdZU
+A3e2q8e+NQU8SbJCRtBbpkZ+rXX1HSvSFFqZ91T7yK907vdqpTPxbJcd6japXzG6NP
+                Zmr5pS57P3
++0Ta8tOy19M/Z69muJEnEc9nMBsaLr1YAKc7sDOBjNdzo7Vam/FM36aaImluOOz/AA++
+                Th1Nm3ti
+Nu06P2Z7V6X2gtd9s2y5QfT2rHxp/wAV++vSmJjZJ4d7T47Y3G621DrhtoBhaAYHWhRgVA
+                TxQ0Sx
+UKWgdKybHigLAKhoeKhSdCjxUBLFCjxUKGKAeKAMUAsUAUBySvdPkiQqFJetCkxUNFqismi5
+                RWTc
+F6CsnJBkIKwckHl+85B+j0B9RdoP545P+FZp+f7T/g9bo39X2/yeE0rtFqWmQTwW5UxXGBIsg3
+                eE
+Zyq/q7txBK9fvrq6zou1qKqaqm6dy2beM8UtkTs4wezbv1UQo7zM1DtpqeoTxTXcFtJJExfPF1L7
+                
+VVWJznw7FwAQDjqDXV03QFmxTNNFVcROz5u7bK+7ne527Jg5K9XVVO1F1z3g67dCb2lLeUzzyXMj
+
+                PHlsyBV27s5wFQBT9YD1rhtezOmtrCa4xpinfwcv7zLmPlngaq11c71tllDdtdX+XRrmIheiMxv4
+Tx
+                sNjRjcu7HgRtq+mAK5uwLHVurfF7tvftjbFUqV3zDnv2yZ63Xnn3lc3a66ujatxRNBabzBDule
+Pe4A
+                DktIzMUKhhuYjpg5HStWOh7VMVKqXWnVGLUd0KlQ9sSoe3ZMTtFeoqcON3mbSbvJ1SaW4uWs
+rX265l
+                Ekk+JCPqKh8LO2CVjAyD5Z/bXn2/ZSzTFNEV1+7phRGzjM74jjLXl5HLOvqlyocmut+111
+ax28NtaW
+                0dva3Iu4YsSN9IM+bF9xyp2nr5AV37vQlFyaqq665qrowmdm7Z9Fv2x5ycVOqmEohRLG
+nbPU4rh5re
+                KC3WQSCWCIOkTNMNruVD/W2eEY+r5jB60q6Cs1UxTVNVSSmVMxjtiGtz2zx3S6dg63
+VE7FBuu6BA3a
+                ibP2bSQj/wCJGP8AfXpajdHn/iToX/kn995164m4ePwF2lbYoGPPBb1x+rXXPNRQ
+l+kmwRRs7uu/Z0
+                GBnHXJx5+6owhi/jYqqRu0jb8x+EEGPAYHJAz19KMIDqUCyXEbKwe2TkYdOo27
+jt/ZmjLiWPfQJdQ2
+                7Z3zdQfQe7P7cHFGEXPMqTRREHdNkKf2DPWhUJ72KNbokH+SjL/f4d3SsliC
+2K43yyRrGcRNsd+mM7
+                Q3vz9qoaKY9Xtygd0ZA0XMmcHK5AAwCepLCoaRkveNGm57eRfEiqDs6mRt
+o8mPkT1oCbXe144+JjNJ
+                kiMbeir5sTnGOoqFGbzaY04X55ckQ+HIVehZju246j1oUUOpQvOsJV45
+G3qVfHRkAJU4JHVWyMelQp
+                U2t2ywGYxybQqOBgZKyOUUgZ9duaFMtb62PJ4vo4olmaT7Ox92CP8A
+UqAdheR3luJkBXJIKN9ZSpwQ
+                RQGTihQoBYoCOKpDkde6fIkhUKSHnUKWLQ0XLWDZalQ3BkpWJOSD
+IjFYk5IPP94sRfsw5H2Jom/pK/
+                8AmrP6oPU6O3z5HNJbW0MstrDv9oiJVWZgVkKnBAGAVJ9Op91c
+kVTv7j1keis+wXDBot3r8/ybpuub
+                1tr3fExV0Yrh4CRJtBxufyXNedr9fct2q6rNHva6P07n5Sp2
+8I7zsWrETMZTjE950PVP+TxYy+y/Jm
+                om3Cri65V5Nx/WXGPvr8z0v8UKoy99ae34VK+0s9m50FGz
+GrzPF9q+43tVpWj6jepPbXNrZ2ss8rhi
+                jbY4yzYUj3D319Dp/wCIOg1H8tV0117Icd87I3SdWeh7
+tEvZMQaju77u+1HbvSZdeFzAOeeZZZHG36
+                WNUIG1cdG3eYFcl/2x0vR38q7lNeydkd0+i9DVXRtd
+2XSkZXaXum7W9n9Nk1G8SKS1iba7RPuIHoxG
+                B0r1eiva/Q667Fq1VOcw1MI6eo6Ou2qcqtx4yvpz
+oBQHRO5iLOr38n6kAX/Wf/8AWurqe44dR8h1O9
+                s/aVjGV+jffh13qfCRgjI/WrrnQgph0+SAq8Uo
+37SjAr4CNxYYGfDt3YHXyoBPphaFo9yMXLPI7pnx
+                t9pfF4celAxT6OssMqGU8jkFZftL9GIzn37g
+OtAyT6SJOV2lYTSFWRx5Lx/U8OcHBoVmXJbck8Eu7H
+                CWOMee5dtAUzaRDObtn2l7gAK5QEphdvT+
+usmoLo9PKXklwDGd77/FHlx4QuA+77vdQpVDoUcUTRo+
+                0PGiuVXH0kRysnn/ADj1qGjJnsrm5hMc
+0sZG6NgOM7fA245BY5DYqABprgxujRI6Boyqx4jaN+pG3d
+                55HnmhRwaW9vxvDIqypyZ8HgKyPv2h
+c9MHy61Cin0dp7aRGnIuJZOUzqMYO3ZgLny2dPOgL5NLRpQy
+                NsRRAFTHkIJC/v8AXOKhoo+QEHtC
+LLttrlo90OPqohLMinIwGLfuoDNtbEW08zo5McxDFG64cDBOfv
+                GKAyagCgCqBUByAV7p8gTFCklq
+FLFqGoLlrJuC5PSsm4MhKzJywZEdYOSDWdsohJ2XvsjOwJJ+5JFY
+                +f3CuOd8HodHz8f2ORX8TGV7
+lWEkMrsRIpz1Jzhs9Qce+ueie49mTZ9lI+z17qi2/afUJ7LShG+J4w
+                Zdsm3bH4Bk+ePL3Vm7lEfB
+Dk1Qpn4tx2Dua7w/bYl7N6k7c0O5dJuZfOaKP/qi3kXjUjy9P2dfxn2+
+                9lvc1TrLMfBV88R+mZ/V
+5T+fM+j6J1+Ue7q39x0y50DQr+Um+061uzL4JTPDHJuXyw24HIx0r4Dou/
+                ci/biKpiM6e/6nsXaY
+xnyI/ol2VsJQljo1jaJGQ0awW0MYVvPI2qMGva9rb9yNdXTFUpRsf0OHSUxh
+                B5Xvonlg7vr6SI4b
+fCvkD0aQKRg9OoNdj2Ah9K2/Kr/rJ1+l/wDQn7HzlZXl1yGVn228A5JI1wiMfJ
+                VKLgHcTg/dX9B1
+0x9z5GJNdXKYOp9ydv8AR6rcfrGKMfu3E/1iupqPmg4NT8v3OgarcXKG1gt2Ecl3
+                NxcxGdihGkJA
+PTdhMDNcB0oNfd3s9vHPCl5NJOk1srM8SCRUml2HbhAj5w2PDUKil9dnTRpbgTD6e4
+                9m065nCoTu
+wpeQDwjYwfzA8vKoy4g2talcaTp01iY3vnuOC5TKlHaKORnUMMgbzH4T94owiz5fkuJW
+                e1fEO6wX
+jZRuQz3DRzIw9GwuPuowi23sH1K7+VXm45beeSKCNUQgRwyGMh8jcWOGIO7w56euQMWTtF
+                qNtbao
+bkhet38l3OBjMDMvEw8tw27l94/ZUZpGTqXaU2uvR24miWztzGl8jFQ5a5yFK7sHEfhLY9DR
+                liDZ
+a/d3FtHZiB3j57pIZGjUO+1lYnaGDD091QGNBc6zLPb2EsptuX2iUXJVOZoYmQINuGjDtydfD5
+                Dy
+BPQUUuq6ha3ZsDMJmjubNechdxiuWYFXCgLuGw9QB0IqFLta1u7sLq8Ee1khskliVvqiWSYxhmPn
+                
+tHTNCk9U+VdL0u7vPlB7l44uiyRxAB9w8S7FXp9xzUBm6hqElvq1jDvCW0sdw8+f9EFIOfTGTQpr
+
+                Oy3aWXUry4guJI25U9rs0jKlkgLlOOTb9oAK3X9agPT1ChQBQBQhGqDkAr3T5EnQEhUNFi1CwXLW
+Tk
+                LkrJqDISsycsGTHWDkgjqVr7XpV5bAZM8EkY/aykCuKvd5Hc0kq5H73nD7GQeK1kYLDcYBJA6O
+M8bZ
+                PlgnqR6ZrsVx38D3YMZlZWKsMMOhFbMntezV/r/ag6H2Ttbi0006bJJcWd+w4pN3+EZnlHmV
+VfDnHR
+                a6Wps28aprjKmqFMdyOxbqqlRGxHdu7jttF2jtGguHT5a06Th1CNOgYqdvKgIU7Xx7uhr8
+I6a9nKuj
+                ekLeLmxXXTNE/ePhn6xzg+q0ms99al/NEbfU9le/4wf3V5vtf/X1+VP4g7Gj/wBODnff
+f/0dX/8A3l
+                v/AOMtd/8Ah9/u1vyr/wCsnW6X/p5+35Pm+3aJ4GtnkMRd1YMf8H0BHi92N3ng1/Ql
+W9nyEFE0MsMh
+                jlUo48wfv8v561Esh2jufs+Hsq05H+NXDuD9ygJ/Wpro3p+M6upndB7G7s7a7i4r
+hNyghl6lSGXqGV
+                lwQR7wawdQoXR7EM7lXd3aJmd5HY5gbfH5nptbrgURWNNJ09LsXSxYmDvIDlsB
+5AFdguduWA939dAy
+                Y0yy9o5+P6Qy8+ctjkEfFuxnH1DihGQGjabzTziACW4eKWYgsNzwHdGcZx0P
+8/rUKxvotg8jvtdeZx
+                JKiSSIjOPUorBfTr06+tEVk59F0y5s5LKeAPbSu0roS312feSDnI8R9DUK
+y0aVp/s11bcX0N4zvcrk
+                +JpPrHOcj93l6VCl0lnbyiDlXd7O4kiyTkMoIBznr0PrQo7qwtrvjMyn
+fC26KRGZHUkYOGUg9R5j1q
+                AqOhaY0JiZGO6VZ2k5JOQyL9VuTdv6Y6dahotTSNPy5aMyGSI28hld
+5C0RJO07y2erGhSs9ntMZDHI
+                ssqNHw4kmlfEZIOBljjqo6+dQo5ez2lTPK8sbyGdZFYNLKQBNjkC
+Dd4d23rtoDMksLSSe3uGj+mtN3
+                s7DI2hxtYYHTBHoagMigChQoAoQVUHIQrYr3T5EkFNCkgpqFLF
+VqhouRTWTZcgNZNwZCA1iTkgyUBr
+                MnJBkRg1io5adhwvtFYewa5fWmMLFM2wf5hOU/8AlIrmtS6Y
+Pom9pUdt91GFvfUf+m+/r/1n/wBXp1
+                858vka3mIcgkHofIiuQydJ7NdorFu1HZa67Ow3v6Qyzhe0
+tzM5mFzzShpW+0SG5G3FuowD59a8fX6C
+                m/aqpuqaIU0/Sad3784O5ZvY1RNO/vPpK7kRrmQKwJTC
+uB6HaDg/uINfgfthTMa+r6xT+D67Rz/LOe
+                99/wD0dX//AHlv/wCMtd3+H3+7W/Kv/rJ1ul/6eft+
+T5qtzAJlM6l4vtBTg9fUfs86/oap9x8fBk6j
+                IFWO1jB4I8vE7PyZD/qnamF6eWM58/uxRHeWTv8A
+2R006d2Z060Iw6QqZB/nv4m/pNdFuWdC/PxG18
+                vPpQ4Az0z6e+gCgHQBQEsVCkh5VCkwcedQ0SyP
+f+yoUkKFGCPLPX3VASDAnAPWhSWRjPp76hRjqBQp
+                LNQBQoUIFAFUCxQHMRb17DPmMR8FGXEYg+6o
+xiWLBRmsS1YayzcUlyQ1lm4pL0irLNxBkJFWGckUl6
+                RVmZOSIOXd7WkG31W31JR9HdpskP8ApI/+
+KkfzVyWJ3wevpqnR5Hgq7BzmUkyXGI7k4byS58yPdvx1
+                Yf0j+isJbjRt+xGq6joXbLTbm2kMFxHc
+pDKVwTskbjlXrkdVJFcd+mK7c+Rq1VNNR2btx2wg7Hd6Xt
+                Iuzc2OqxRrrNgBk27RIAko9c7CG8uo
+z+74fpv2cjpPRbIV628J4/2z9J5T937FvWe4vf2zv9TP7554
+                bjuzu54HEsMrWzxSKcqytKpBB9xF
+fnfsHbqo6YopqhVRFcTH1xk9TpaYnTzMfQ+dhBaRW8dw7PKzZD
+                Q7dqhseEM27dg9D5dR61+/uWj5
+E2nZnTxr3abTbGOHjt1Yci5LYjVjK+Sf2kCsXJxpnjJJnkfRIj6V
+                0TzjW61AXFt4N6rIS30RmAGx
+h1QefWgMRIWPA91Z7rSPlVIkiON24bZDD1IyM/8A8aBAloyLC11bPJ
+                Z/TcVvs5DHubKbkGfs9B7q
+As9just7Opt4/ZEXjkUyHzfwA7h1GfvoDHa21FuC4jt2/kEUQQElWJ2g
+                y4Xb4sjw1CmdqsV69xZ+
+yKdziRDLg4jDhfEfLyHlVEQOCzEGgSW7wPKF5UWLHib6Rtn+45/fWSmH7H
+                cLBHHcwmS4S4LXMzRP
+cI4MbbWwMZA6D7jQpkfJj3UsKpFGsQgcFpLZlQEv9mMkbW9fOhRXKG0t9SgZ
+                JnDQoscvGzBtsIXJ
+YDH7agRZawr8pSStDkST74na1dztIGCJvJR/VQqHHpSrpFu/sn0oKm7QJiV493
+                iX0J9Dj1qFRC6t
+N6StbWrxWhkg+iMJILKW3vw9DjBXPQZoERS31CNAbSA7zdExNxGFBvg49/Gc7VUn
+                186Au0/Tb6Ca
+GOJinE10DNLGWBBaPGeq/WxkdaFRUbDVLi0gtkiYNbck29iYhzGRuMjIbOACcff51A
+                eitXaa3jlZ
+DGzqC0bAgqfUYNClu2gQttCBtqg56IK9Rnz2I+Coy4khBRlxJiCozWJYIajNRSWrDUZq
+                KS5Yqyzc
+UlyxVlm4gvSKss3EGn7adnPlvs9cWiLm5T6W1P8ApE8h+8ZFZivGWdvTVKfpJ8/MrKxVgV
+                ZThlPQ
+givRO8KgN3ogS816wlTw3PtMTyx+jYcFnU+nqSv83urgr+GmeByU7ZPe95Pah+z/AHvdo7kW
+                Vtfm
+e2itVS7jWRYxNZxK7puBw2wsPd165HSuppLWdinav/TsX68bkmFFfdotM7CS9ntfgVLS/tvlPQ
+                pJ
+pI1ACOX2Yboyts3Io8zgfaxXharoe12lb1tr5onG5ERMtxjE7ODiKp4bdiZz0X6vczaq3b4OeXF/
+                
+eXEaxzSF1XqP/wA+/GTjPlX1sURB5sydd7luy7QWU2u3CYkuvorXPnxA+I/+0w/oro6m46lwOK7O
+
+                xHTtlcB1kYGp6ilh7ODBLcSXMnFFFDt3btpf7bIMYU+tAjCuO0iwSGJtNvDMkHtUsaiElI9zL1+l
+6n
+                wZwuaMItuO0elwPpqku41TBtnVegVtu1nzgqCXA8qBFkmtWkbaorI//NMYluMAdQ0Zk8HXqcD1
+xQIx
+                7jtZpNvBezTCRVslhaQYXLe0LuRUG7qffQIvHaCx9nv59kmzTo1knGFyQ8QmG3r+qfX1qFRO
+fXrKC0
+                1C6dJDHppCzgBcnKK/h6+5x50Kid7runWWrWelzFvaL36hAG1fPbvORjeQQv31Cl2qammn
++zg28tzJ
+                dScMMUOzdu2l/tsgxhT60KYY7T2L2sjPa3AlFybH2EojSvNsDlQFZkxtOSS2KAme09nH
+bXDta3CT2k
+                kUMtiVQTAzttix49hDHyIaoUnD2ltXZY5La4gla7WxMUgjyJGi5gTtdht2+40BG07W
+6TdEG35JEa++
+                TlkAXaZNhfcDu+pgedAZD6/ZJdezFJN/ti2GcLjkeHmB8/q7f6ahSej67p+rR3ct
+mS0VpM0DSdMMUA
+                JKEE5Xr0NBBjXna3SbTTNP1GcSLBqRThGAWVWXeXcZ+qg+tjNAbvbUKg2UCDbV
+AtlAjxPs9ejkeLiM
+                W9RjEkLejLiSEFRlxLFgqMuJNYajNYlqw1GaxLlirLNxSWrFWWbiC0R1GaR8
+naRqnyzZ7mOdTtl/lS
+                +ssa+U495A/wAJ/repxjo7VuMKt/ce/q7C+KNxfXrnRNhol/dWeoQmBtu+
+RA37m6Vx3KImDVMqT2Hf
+                OsV33ma1xnZch4U2MRtfZbxqNrdMHp5H+f0rqaCVZjh/9OfU7bknlL59
+Vn02MX7Tk2JEUIn3ELEy7V
+                RN3VQvF0A6f7+1Tjls7zhlo1kkttZ2r395/i0XRY84M0npEv8A5j9k
+fuB4dXqotU/3HJYszXP0PoHu
+                WvLjUO7TSLy4OZpmui2OgH8rmAVR6KoGAPQV5dip07Th1lKuT9vw
+e32Vys6qMDUdNmubvTpoyoW0nM
+                soOclTE8fh6HrlxVYRhX3ZeHUNbku7vx2bWi23GkssbFhI7NuC
+FQVIb1NGEYOqdi7nUJ75/aRaxNBH
+                a6fDCqYWOLxqHJTI+l6+A+VGEQn7FT3x1W51BbeS+vLaJLZ1
+L7UnWDYzeQwu/qPPpRhFc/YS8uLu/n
+                mmjKS2aw2cGW2+0C34OWTp9nJ29D556UYRstS7HW91pc6J
+mPUJrZYWdZpY4ndE2oZFQgMB96+VRhGJ
+                qfYVL6HVnZIWvrxlNnMxfwBYkXxYH6ynyBoy4k9S7H6r
+fzaldm+9nupnQ2CR7WRRbdYCzNHvQ78lth
+                9fWjGJvLzTbq6m0qY7Fazm5rhckjrC8ZCdOvif1x0q
+M0jWN2Y1JLiW+t5IfbE1GS9tVfdsaOWBYWjc
+                gZUkA9QDijCIz9nddu7h7q4a2WW4ntDKiM5WK3tJ
+OUBDsBd2YnOQKMIhrfY/U9Q51guUtxPqUd3yAt
+                vWAW3A+PD9fzx6ffRiaSUnZG+tsfJi26xwajFe
+W8Ejuq8UVrwbSwRzu3ftoxiYF52a7SarcXtrKI7E
+                m+t732qJ3ZeNrdoJFiYxrl1Cg+Q86MYm3h7P
+axpguU0b2VbeWbKW0pcDiFskS+MKxDK6Z8jketRlRj
+                t2Gu7hbe2uL7js7TT1sIhCEZnLjE7kSI2z
+cFUDac/eKZDE3+h2moW2kWltqDI93DGI5JIyzK2zoGyw
+                ByQAT99RliDO2UKg2UCFtNAjy3s9d3I8
+vEOCjJiMQVGXElwUZcSYgqMuJIQ1GXEsENRmsSxYqjNIsW
+                KozSLBFWWaR8HWt1cWtxHc20hiniO6
+ORehBFeGfWns9N17T9UAWVo7HUD9ZGIS3kPvRj0jP+a3T3H7
+                Ne3pek+6v/k829pO+kz3jubWfEiN
+DNGQcMMEHzHQ17ETFUfQ6O49L3o6hFqPeBrV1AQ8b3G1Cv8AmK
+                E+/wDVrr6OnG1EHLfl1yeV1C6s
+9KX/AJzciUdUsEP059fEOvED726+4GuDU9IUUbttRyWtNVV9IPF6
+                xrN3qlwJZ8JHGNkFun1I19yg
+5/aSepNfPXLk1y53nq0URTCg+te4JM90uhf+9f8A3k1d/T/JB4msj+
+                bP77joOyuZnWQbKMIOOjCD
+jowg2UCHx1GVD2UCGI6MqHsowiWyoVDCUCHsoyoeyoEGygQ9lCoNlAg2
+                UCDZQINtAg2UCFtoEaL2
+euzkdDEPZ6ZDEOCmRcSfBUyGIxBRlxJCCjLiSENRlxJiGozWJYIqjKiYiq
+                M0j4e+brvB/wAmNW/2
+G5/sV5Pu6uEn0fvqOMf8h83PeF/kxq3+w3P9ip7urgPfUcYNrp/Z/vbsYxBF
+                2f1aS2XytptPuJYx
+79oeM7M+9cGuW3Vco+Vwcdc2qt6Mi50vvdkBW27M6nYKfP2XT7pX+/6VleXr6j
+                fiuS5fvV72Zops
+08DRnu57wycnsxq+f/Ubn+xXWwq4HN72jjAfNx3h/wCS+r/7Dc/2KYVcB72jjB9X
+                9x2l6jp3ddot
+nqNrNZ3kXtPLbXCNFIu67lYbkcBhlSCK79nZSeRqdtyUe72VynAg46jCDjqsIfHQIO
+                Oowh7KMqHx
+0YQBKFQ+OoEPZQqHsowh7KjKh7KBBsoEPZQINlAg2UCDZQINlAg2UCFsoEa3grmZ1sQ4
+                KMYhwUYx
+Hw1GXElwUYxHwUZcR8NRlxJCGjGJPhqM1iSEVRlxJCKjKiQjqMqHx0ZUPjqMIfHRhBx0Kh
+                8dGEGy
+jCDjowg2UCDjqMIfHQIOOjKh8dGEHHRhD46MIeyoyoeyjCDZQINlAg2UCHsoVBsoEGyoEGyq
+                EGyg
+QbKBC2UCKOCtM48A4KMYD4KMYhwUZcQ4KMYEuGoxiPgoxiPhoy4j4aMuI+GoxiPioy4j4qjCJc
+                VG
+VD46MYhxUYQcdRlQcVGEHHVZEHHRlQcVRhD46MIOOjCDjowh8dAg46FQ+OjCDjowg46jCHx0ZUHH
+                
+RhBx0YQbKBBsoEGyjCDZRhD46MIXHRhBsoRE+CozWAcFGMA4KMYBwUYxDgoxiHBRjEfBRlwHw0Yx
+
+                Hw1GMQ4aMYj4aMYhw0ZcR8NGMQ4qMuIcVGTEOKjLiHFUYQ+KjJiLiqsYhxUZcQ4qMIOKjCDiowh8
+VG
+                EHFUCDjowg46MIOOjCHx0YQcdAg46BBx0YQcdAg46BBx0CDjoEHHQIXHRhGZwVhnLgHBRjAOCj
+GAcF
+                GMA4KMYBwUYwDgoy4hwUYxDgoxiHBRjEfDRjEOGoxiHDRjEOGjGIcVGMRcVVjEOKjGIcNGMQ
+4aMYhw
+                0YxDhoxiHDRjEOKjJiLioxiHFRlxDioxiPioxiHFRjEOKjGIcVGMQ4qMYhxUYxDioxiHFR
+jEOKjGIc
+                VGMQ4qMYhxUYxNlw1ws7GIcNGMQ4aMYhw0YxDhoxiHDRjEOCjGIcFVjEXDRjEOGjGIcF
+GMRcNGEHDR
+                jEOGjJiHFRhC4aMYhw0YxFw1WMQ4qMIOKoxiLiqsiDiowg4qMIXFRhBxUYQcVGEHFR
+hBxUYQcVGEHF
+                RhBxUYQcdGEHHRhBx0YQcdGEHHRhBxUYQcVGEf/Z
+
+            </property>
+        </structure>
+    </list-property>
+</report>

@@ -1,0 +1,6 @@
+SELECT VIZA.`VizaId`, VIZA.`Datum`, VRSTAVIZE.`Naziv`, VRSTAVIZE.`Trajanje_Broj_Dana`,
+  STRANAC.`Ime`, STRANAC.`Ime_Jednog_Roditelja`, STRANAC.`Prezime`,
+  STRANAC.`Datum_Rodjenja`, STRANAC.`Jedinstveni_Identifikacioni_Broj`,
+  DRZAVA.`Naziv`
+  FROM
+       `si_proj021_db1`.`viza` AS VIZA JOIN `si_proj021_db1`.`vrsta_vize` AS VRSTAVIZE ON VIZA.`vrsta_Vize_Vrsta_VizeId` = VRSTAVIZE.`Vrsta_VizeId` JOIN `si_proj021_db1`.`stranac` AS STRANAC ON VIZA.`stranac_StranacId` = STRANAC.`StranacId` JOIN `si_proj021_db1`.`drzava` AS DRZAVA ON STRANAC.`drzava_DrzavaId` = DRZAVA.`DrzavaId`
